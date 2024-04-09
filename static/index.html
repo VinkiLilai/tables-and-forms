@@ -10,7 +10,71 @@
     <h1>Найди себе друга!</h1>
 
     <!--Форму размещай тут-->
-
+    <form action="/pets/orders" method="post">
+        <label for="petType">Животное
+            <select id="petType" name="petType">
+                <option value="cat">Капибара1</option>
+                <option value="dog">Капибара2</option>
+                <option value="tiger">Капибара3</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="boy"> он
+            <input type="radio" name="gender" value="girl"> она
+            <input type="radio" name="gender" value="none"> оно
+        </label>
+        <br>
+        <label>
+            Цвет глазюк:
+            <input type="color" name="eyeColor">
+        </label>
+        <br>
+        <label>
+            Длина хвостика:
+            <input type="range" name="tailLength" min="7" max="120">
+        </label>
+        <br>
+        <label>
+            Имечко вашей капибарочки?
+            <input type="text" name="name">
+        </label>
+        <br>
+        <label>
+            Когда родилося?
+            <input type="date" name="dateOfBirth">
+        </label>
+        <br>
+        <label>
+            e-mail:
+            <input type="email" name="email">
+        </label>
+        <br>
+        <label>
+            Номерочек не подскажете?
+            <input type="tel" name="phone">
+        </label>
+        <br>
+        <label>
+            Только капибары
+            <input type="checkbox" name="rules" checked="checked" value="true"> Да
+        </label>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
 </main>
 </body>
 </html>
+
+/*
+В запросе нет обязательных полей:
+petType
+gender
+eyeColor
+tailLength
+name
+dateOfBirth
+email
+phone
+rules
+*/
